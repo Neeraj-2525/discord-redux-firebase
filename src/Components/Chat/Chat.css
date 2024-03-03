@@ -70,7 +70,7 @@
     right: 0%; */
     display: none;
     border: none;
-    background-color: #4242499a;
+    background-color: transparent;
     justify-content: center;
     color: var(--dim-font);
     border-radius: 5px;
@@ -99,4 +99,13 @@
     .chat-wrapper{
      flex: 1;
     }
+
+    .chat-submit-button{
+        display: block;
+    }
+
+    .chat-input-icons{
+        display: none;
+    }
+
 }

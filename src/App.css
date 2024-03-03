@@ -3,3 +3,7 @@
     overflow-y: hidden;
     height: 100%;
 }
+
+.app::-webkit-scrollbar{
+    display: none;
+  }

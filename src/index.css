@@ -10,7 +10,8 @@ body {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    /* overscroll-behavior-y: none; */
+    overscroll-behavior-y: none;
+    overflow-x: auto;
   
 
 }
