@@ -14,7 +14,7 @@ const Sidebar = () => {
     const user = useSelector(selectUser);
     const [channels, setChannels] = useState([]);
     const [showLogoutWindow, setShowLogoutWindow] = useState(false);
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
 
 
     useEffect(() => {
@@ -74,8 +74,8 @@ const Sidebar = () => {
 
             <div className={`sidebar-toggle-button cur-po`} onClick={toggleSidebar}>
                 {sidebarOpen?
-                <ChevronLeftIcon className="sidebar-toggle-icon"/>:
-                <ChevronRightIcon className="sidebar-toggle-icon"/>
+                <ChevronRightIcon className="sidebar-toggle-icon"/>:
+                <ChevronLeftIcon className="sidebar-toggle-icon"/>
                 }
             </div>
 

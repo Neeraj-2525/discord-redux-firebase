@@ -208,6 +208,14 @@
     top: 50%;
     z-index: 100;
     color: var(--header-color);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--low-back);
+}
+
+.sidebar-toggle-button:hover{
+    background-color: var(--sidebar-profile-back);
 }
 
 .sidebar.sidebarToggled{
