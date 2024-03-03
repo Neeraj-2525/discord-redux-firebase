@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Counter } from './features/counter/counter';
 import './App.css';
 import Sidebar from './Components/Sidebar';
@@ -12,6 +12,7 @@ import { login, logout } from './features/userSlice'
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
+
 
   
 
@@ -36,12 +37,17 @@ function App() {
     });
   }, [dispatch]);
 
+
+
+
+  
+
   return (
     <div className="app">
       {user!==null ? (
         <>
           <Sidebar />
-          <Chat />
+          <Chat  />
         </>
       ) : (
         <>

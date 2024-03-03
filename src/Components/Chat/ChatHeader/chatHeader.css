@@ -68,3 +68,9 @@
 .chat-header-search>input:focus{
     width: 200px;
 }
+
+@media screen and (max-width: 768px){
+    .chat-header-search{
+        display: none;
+    }
+}

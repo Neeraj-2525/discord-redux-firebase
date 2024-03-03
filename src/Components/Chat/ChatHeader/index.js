@@ -7,8 +7,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import InboxIcon from '@mui/icons-material/Inbox';
 import HelpIcon from '@mui/icons-material/Help';
 
-const ChatHeader = ({channelName}) => {
 
+const ChatHeader = ({channelName}) => {
 
     return (
         <div className='chatHeader'>

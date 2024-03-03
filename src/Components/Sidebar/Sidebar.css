@@ -4,6 +4,7 @@
 .sidebar{
     display: flex;
     flex-direction: column;
+    position: relative;
     flex: 0.25;
     height: 100vh;
     background-color: #2b2d31;
@@ -202,3 +203,8 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .sidebar-top h3 {
+        font-size: 14px; /* Decrease font size for mobile */
+    }
+}

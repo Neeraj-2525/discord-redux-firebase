@@ -91,4 +91,12 @@
 }
 
 
+.chatScroller{
+    padding-bottom: 60px;
+}
 
+@media screen and (max-width: 768px){
+    .chat-wrapper{
+     flex: 1;
+    }
+}

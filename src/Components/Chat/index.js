@@ -39,7 +39,6 @@ const Chat = () => {
             }
             
         }, [channelId])
-        console.log(messages)
 
 
     const scrollToBottom = () => {
@@ -87,7 +86,7 @@ const Chat = () => {
 
     return (
         <div className='chat-wrapper'>
-            <ChatHeader channelName={channelName} className='chat-header' />
+            <ChatHeader  channelName={channelName} className='chat-header' />
             {channelId ? (
                 <>
                     <div className="chat-messages">
@@ -105,7 +104,7 @@ const Chat = () => {
                             ))
                             )}
 
-                    <div ref={chatRef} className="chatScroller" />
+                    <div ref={chatRef} className="chatScroller"/>
                     </div>
 
 

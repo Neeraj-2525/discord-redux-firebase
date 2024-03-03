@@ -7,12 +7,15 @@ import { Avatar } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import db, { auth } from '../../firebase';
-
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 const Sidebar = () => {
     const user = useSelector(selectUser);
     const [channels, setChannels] = useState([]);
     const [showLogoutWindow, setShowLogoutWindow] = useState(false);
+    // const [sidebarOpen, setSidebarOpen] = useState(true);
+
 
     useEffect(() => {
         db.collection('channels').onSnapshot((snapshot) =>
@@ -39,6 +42,14 @@ const Sidebar = () => {
         setShowLogoutWindow(!showLogoutWindow);
       };
 
+    //   const handleOpenSidebar = () => {
+    //     setSidebarOpen(true);
+    //   };
+    
+    //   const handleCloseSidebar = () => {
+    //     setSidebarOpen(false);
+    //   };
+
     const profileIcons = [
         {
             micOn: <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path className='colorFill' fill="#949ba4" d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"></path><path fill="currentColor" d="M6 10a1 1 0 0 0-2 0 8 8 0 0 0 7 7.94V20H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.06A8 8 0 0 0 20 10a1 1 0 1 0-2 0 6 6 0 0 1-12 0Z"></path></svg>
@@ -55,13 +66,21 @@ const Sidebar = () => {
     ]
 
     return (
-        <div className='sidebar'>
+        <div className={`sidebar`}>
             <div className="sidebar-top-container">
                 <div className="sidebar-top">
                     <h3>Electrolyte's server</h3>
                     <ExpandMoreIcon />
                 </div>
             </div>
+
+            {/* <div className="sidebar-toggle-button-left" onClick={handleCloseSidebar}>
+                <ChevronLeftIcon className="sidebar-toggle-icon"/>
+            </div>
+
+            <div className="sidebar-toggle-button-right" onClick={handleOpenSidebar}>
+                <ChevronRightIcon className="sidebar-toggle-icon"/>
+            </div> */}
 
             <div className="sidebar-channels">
                 <div className="text-channels-wrapper">
