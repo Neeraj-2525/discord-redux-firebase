@@ -36,13 +36,14 @@ const Chat = () => {
                 .onSnapshot(snapshot => {
                     setMessages(snapshot.docs.map((doc) => doc.data()))
                 })
-        }
-
-    }, [channelId])
+            }
+            
+        }, [channelId])
+        console.log(messages)
 
 
     const scrollToBottom = () => {
-        chatRef.current.scrollIntoView({
+        chatRef.current?.scrollIntoView({
             behavior: "smooth",
             block:"start",
         })
@@ -104,16 +105,16 @@ const Chat = () => {
                             ))
                             )}
 
+                    <div ref={chatRef} className="chatScroller" />
                     </div>
 
-                    <div ref={chatRef} className="chatScroller" style={{paddingBottom:"5px}"}}/>
 
                     <div className="chat-input">
                         <div className="chat-input-left cntr">
                             <AddCircleIcon className='icon-hover' />
                             <form className='cntr'>
                                 <div className="input-container">
-                                    <input ref={inputRef} placeholder={`Message #${!channelName ? 'Here' : channelName}`} />
+                                    <input maxLength={2000} ref={inputRef} placeholder={`Message #${!channelName ? 'Here' : channelName}`} />
                                 </div>
                                 <button onClick={sendMessage} disabled={!channelId} className='chat-submit-button ctr' type="submit"><SendIcon className='icon-hover' /></button>
                             </form>

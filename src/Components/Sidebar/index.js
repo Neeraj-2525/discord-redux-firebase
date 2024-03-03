@@ -102,7 +102,7 @@ const Sidebar = () => {
                 </div>
             )}
             <div className="sidebar-profile">
-                <div className="sidebar-profile-left">
+                <div className="sidebar-profile-left" onClick={handleSettingClick}>
                     <Avatar src={user.photo} className='avatar-profile' />
                     <div className="sidebar-profile-info">
                         <h3>{user.displayName}</h3>

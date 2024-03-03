@@ -7,14 +7,21 @@
     border-bottom: 1px solid #1b1d1f;
 }
 
-.chatHeader-left >h3{
+.chatHeader-left{
+    max-width: 30vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.chatHeader-left >h3{
     color: #fff;
     font-size: 16px;
     font-weight: 400;
-    gap: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 5px;
 }
 
 .chatHeader-right{
