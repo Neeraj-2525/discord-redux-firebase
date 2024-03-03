@@ -13,8 +13,6 @@ const Message = ({ id, timestamp, message, user }) => {
   const channelId = useSelector(selectChannelId);
 
 
-    console.log(id)
-
     return (
         <div className="message-wrapper">
             <div className='message'>
