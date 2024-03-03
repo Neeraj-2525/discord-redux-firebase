@@ -7,6 +7,22 @@
     margin: auto;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--dim-font);
+}
+
+.wrapper > h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.wrapper > span{
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .wrapper img{
@@ -16,7 +32,24 @@
 }
 
 .wrapper > p{
-    font-size: 15px;
-    color: var(--dim-font);
+    font-size: 16px;
     text-align: center;
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 768px) {
+    .wrapper > h3{
+        font-size: 20px;
+    }
+    
+    .wrapper > span{
+        font-size: 15px;
+    }
+
+    .wrapper > p{
+        font-size: 14px;
+        text-align: center;
+        text-transform: capitalize;
+    }
 }

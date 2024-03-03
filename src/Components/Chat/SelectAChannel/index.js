@@ -4,8 +4,10 @@ import './SelectAChannel.css'
 const SelectAChannel = () => {
     return (
         <div className='wrapper'>
-            <img src="https://media.tenor.com/9Gwj99b__A8AAAAi/wumpus.gif" alt="wumpus sticker" />
-            <p>Select a channel</p>
+            <h3>Hey Welcome There </h3>
+            <span>Select A Channel </span>
+            <img src="https://media.tenor.com/Cr8wcueQSiMAAAAi/wumpus.gif" alt="wumpus sticker" />
+            <p>Tip: You can create new channels</p>
         </div>
     )
 }
