@@ -14,7 +14,7 @@ const Sidebar = () => {
     const user = useSelector(selectUser);
     const [channels, setChannels] = useState([]);
     const [showLogoutWindow, setShowLogoutWindow] = useState(false);
-    // const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
 
     useEffect(() => {
@@ -42,13 +42,11 @@ const Sidebar = () => {
         setShowLogoutWindow(!showLogoutWindow);
       };
 
-    //   const handleOpenSidebar = () => {
-    //     setSidebarOpen(true);
-    //   };
+      const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+        console.log(sidebarOpen)
+      };
     
-    //   const handleCloseSidebar = () => {
-    //     setSidebarOpen(false);
-    //   };
 
     const profileIcons = [
         {
@@ -66,7 +64,7 @@ const Sidebar = () => {
     ]
 
     return (
-        <div className={`sidebar`}>
+        <div className={`sidebar ${sidebarOpen?'sidebarToggled':''}`}>
             <div className="sidebar-top-container">
                 <div className="sidebar-top">
                     <h3>Electrolyte's server</h3>
@@ -74,13 +72,12 @@ const Sidebar = () => {
                 </div>
             </div>
 
-            {/* <div className="sidebar-toggle-button-left" onClick={handleCloseSidebar}>
-                <ChevronLeftIcon className="sidebar-toggle-icon"/>
-            </div>
-
-            <div className="sidebar-toggle-button-right" onClick={handleOpenSidebar}>
+            <div className={`sidebar-toggle-button cur-po`} onClick={toggleSidebar}>
+                {sidebarOpen?
+                <ChevronLeftIcon className="sidebar-toggle-icon"/>:
                 <ChevronRightIcon className="sidebar-toggle-icon"/>
-            </div> */}
+                }
+            </div>
 
             <div className="sidebar-channels">
                 <div className="text-channels-wrapper">

@@ -14,7 +14,7 @@
     position: relative;
     padding: 12px 16px;
     box-sizing: border-box;
-    z-index: 3;
+    /* z-index: 3; */
     transition: background-color .1s linear;
     border-bottom: 1px solid #1b1d1f;
     cursor: pointer;
@@ -105,7 +105,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--sidebar-profile-back);
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .sidebar-profile-left{
@@ -200,6 +200,19 @@
 
 .logout-window>button:hover{
     background-color: #000;
+}
+
+.sidebar-toggle-button{
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    z-index: 100;
+    color: var(--header-color);
+}
+
+.sidebar.sidebarToggled{
+    margin-left: -225px;
+    /* width: 0px; */
 }
 
 

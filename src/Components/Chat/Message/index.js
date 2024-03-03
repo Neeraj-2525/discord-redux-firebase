@@ -16,7 +16,7 @@ const Message = ({ id, timestamp, message, user }) => {
     return (
         <div className="message-wrapper">
             <div className='message'>
-                <Avatar src={user.photo} />
+                <Avatar src={user.photo} classnName="profilePicIcon"/>
                 <div className="message-info">
                     <h4>{user.displayName}
                         <span className="timestamp">
