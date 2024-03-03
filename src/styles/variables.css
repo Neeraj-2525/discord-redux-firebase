@@ -1,0 +1,14 @@
+#root{
+    --header-color: #f2f3f5;
+    --sidebar-back: #2b2d31;
+    --sidebar-back-hover: #313338;
+    --sidebar-inactive: #949ba4;
+    --sidebar-active: #dbdee1;
+    --dim-font: #b5bac1;
+    --sidebar-profile-back: #232428;
+    --chat-back: #313338;
+    --search-back: #1e1f22;
+    --low-back: #424249d0;
+    --chat-input-back: #383a40;
+    --chat-select: #2e3035;
+}

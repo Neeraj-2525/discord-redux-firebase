@@ -1,0 +1,58 @@
+.message-wrapper{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+
+.message{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    flex: 0.75;
+}
+
+.message-wrapper:hover{
+    background-color: var(--chat-select);
+}
+
+.message-info{
+    margin-left: 20px;
+}
+
+.message-info h4{
+    font-weight: 400;
+    font-size: 16px;
+    color: #f2f3f5;
+}
+
+.timestamp{
+    color: #949ba4;
+    font-size: 11px;
+    margin-left: 15px;
+}
+
+.message-info p{
+    font-size: 15px;
+    font-weight: 300;
+    color: #dbdee1;
+}
+
+.delete-icon-wrapper{
+    flex: 0.25;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.delete-icon-wrapper .delete-icon{
+    color: var(--sidebar-inactive);
+}
+
+.delete-icon:hover{
+    color: var(--sidebar-active);
+}
+
+.message-wrapper:hover .delete-icon-wrapper{
+    opacity: 1;
+}

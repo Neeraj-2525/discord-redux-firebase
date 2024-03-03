@@ -1,0 +1,204 @@
+@import url(/src/styles/variables.css);
+
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: 0.25;
+    height: 100vh;
+    background-color: #2b2d31;
+}
+
+.sidebar-top-container{
+    position: relative;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    z-index: 3;
+    transition: background-color .1s linear;
+    border-bottom: 1px solid #1b1d1f;
+    cursor: pointer;
+}
+
+.sidebar-top-container:hover{
+    background-color: var(--sidebar-back-hover);
+}
+
+.sidebar-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--header-color);
+}
+
+.sidebar-top h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.sidebar-channels{
+    flex:1;
+    padding: 12px 16px 12px 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.sidebar-channels::-webkit-scrollbar{
+    width: 0px;
+}
+
+.sidebar-channels:hover::-webkit-scrollbar {
+    width: 5px; /* Show scrollbar when hovered */
+}
+
+.sidebar-channels::-webkit-scrollbar-track{
+    background-color: #2b2d31;
+}
+
+.sidebar-channels::-webkit-scrollbar-thumb{
+    background-color: #1a1b1e;
+    border-radius: 10px;
+} 
+
+.text-channels-header:hover .text-channels-left{
+    color: var(--sidebar-active);
+}
+
+.sidebar-add-channel:hover{
+    color: var(--sidebar-active);
+}
+
+.text-channels-wrapper{
+    color: var(--sidebar-inactive);
+}
+
+.text-channels-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-channels-left{
+    display: flex;
+    align-items: center;
+}
+
+.text-channels-left .channel-down-icon{
+    font-size: 16px;
+}
+
+.text-channels-left h4{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+}
+
+.voice-channels-wrapper{
+    margin-top: 20px;
+}
+
+
+.sidebar-profile{
+    padding: 12px 16px 12px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sidebar-profile-back);
+    z-index: 5;
+}
+
+.sidebar-profile-left{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.sidebar-profile-icons{
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon{
+    padding: 5px;
+    margin: 1px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-icon:hover{
+    background-color: #383a40;
+}
+
+.profile-icon:hover .colorFill{
+    fill: var(--sidebar-active);
+}
+
+.sidebar-profile-info{
+    flex:1;
+}
+
+.sidebar-profile-info h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sidebar-profile-info .hoverRoll{
+    font-size: 10px;
+    vertical-align: top;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    contain: paint;
+    color: var(--dim-font);
+    margin-bottom: -18px;
+}
+
+.hovered, .default{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all .22s ease;
+    pointer-events: none;
+    width: 100%;
+    display: block;
+}
+
+.hovered{
+    transform: translate3d(0, 100%, 0);
+}
+
+.sidebar-profile-left:hover .hovered{
+    transform: translate3d(0,-100%,0);
+}
+
+.sidebar-profile-left:hover .default{
+    transform: translate3d(0,-150%,0);
+}
+
+.logout-window{
+    width: 100%;
+    text-align: center;
+    transition: all 0.22s ease;
+    z-index: 0;
+    transition: all .22s ease;
+}
+
+.logout-window button{
+    width: 100%;
+    border: none;
+    background-color: #1b1d1f;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 18px;
+    letter-spacing: 1pt;
+}
+
+.logout-window>button:hover{
+    background-color: #000;
+}
+
+

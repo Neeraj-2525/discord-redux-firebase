@@ -1,0 +1,20 @@
+.cur-po{
+    cursor: pointer;
+}
+
+
+.cntr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-hover:hover{
+    color: var(--sidebar-active);
+    cursor: pointer;
+}
+
+.fill-hover:hover{
+    color: var(--sidebar-active);
+    cursor: pointer;
+}

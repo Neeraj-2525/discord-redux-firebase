@@ -1,0 +1,94 @@
+.chat-wrapper{
+    background-color: var(--chat-back);
+    display: flex;
+    flex-direction: column;
+    flex: 0.75;
+    height: 100vh;
+    position: relative;
+}
+
+.chat-messages{
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: none;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.chat-messages::-webkit-scrollbar{
+    width: 14px;
+}
+
+.chat-messages::-webkit-scrollbar-track{
+    background-color: #2b2d31;
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+    background-color: #1a1b1e;
+    border-radius: 10px;
+    border: solid 3px transparent;
+    background-clip: content-box;
+
+
+}
+
+.chat-input{
+    color: var(--dim-font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px;
+    border-radius: 5px;
+    margin: 20px;
+    /* height: 50px; */
+    max-height: 50px;
+    background-color: var(--chat-input-back);
+    border: 1px solid rgba(58, 58, 58, 0.596);
+}
+
+.chat-input-left>form{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.chat-input-left>form>.input-container>input{
+    padding: 10px 0vw 10px 0;
+    width: 60vw;
+    /* max-width: 60vw; */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: medium;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.chat-submit-button{
+    /* position: absolute;
+    right: 0%; */
+    display: none;
+    border: none;
+    background-color: #4242499a;
+    justify-content: center;
+    color: var(--dim-font);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    
+}
+
+.chat-submit-button:hover{
+    background-color: #424249e7;
+    color: var(--header-color);
+}
+
+
+.chat-input-icons>svg{
+    padding: 5px;
+}
+
+
+

@@ -1,0 +1,40 @@
+.empty-wrapper{
+    text-align: center;
+    margin-top: 100px;
+    min-width: 70%;
+}
+
+.empty-wrapper h2{
+    font-size: 2rem;
+    color: var(--header-color);
+    text-align: center;
+    line-height: 0.9;
+    padding-bottom: 20px;
+}
+
+.empty-wrapper h2 span{
+    font-size: 1.5rem;
+}
+
+.empty-wrapper h2 span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.empty-wrapper p{
+    color: var(--dim-font);
+    font-size: 15px;
+}
+
+.empty-wrapper .gif{
+    width: 100%;
+    height: 150px;
+    max-height: 200px;
+}
+
+.gif>img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    object-fit: contain;
+}
